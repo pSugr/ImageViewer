@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun fillListFromJson(imageList: ArrayList<Pair<String, String>>) {
-        imageAdapter.imageUrls = imageList.map { s -> s.first }
+        imageAdapter.imageUrls = imageList.map { it.first }
     }
 
     private fun setupRecyclerView() {

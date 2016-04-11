@@ -50,7 +50,6 @@ private class DownloadSubscriber<T>(private val onDownloadComplete: (T?) -> Unit
     }
 
     override fun onCompleted() {
-        print("onCompleted")
     }
 
     override fun onError(e: Throwable?) {

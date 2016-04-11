@@ -19,12 +19,12 @@ class ImageAdapter(val showAction: (url: String, finishedAction: (Bitmap?) -> Un
     }
 
     override fun onBindViewHolder(holder: CardViewHolder?, position: Int) {
-        showAction(imageUrls[position], { bitmap -> setImage(holder!!, bitmap) });
+        holder!!.reset()
+        showAction(imageUrls[position], { bitmap -> setImage(holder, bitmap) });
     }
 
     private fun setImage(holder: CardViewHolder, image: Bitmap?) {
-        if (image == null)
-            return
+        if (image == null) return
 
         holder.setImage(image)
     }
